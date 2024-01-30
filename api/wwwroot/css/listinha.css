@@ -1,0 +1,164 @@
+
+.listinha-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: aquamarine;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.container-title {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container-title h4 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: inline-block;
+
+}
+
+.container-title img {
+    width: 50px;
+    height: 50px;
+}
+
+.container-input {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(93, 249, 197);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.container-input input {
+    padding: 5px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container-input button {
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background: rgb(6, 200, 135);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 38px;
+    height: 38px;
+}
+
+.container-list {
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: rgb(93, 249, 197);
+}
+
+.container-list ul {
+    max-height: 60vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.container-list ul li {
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.container-list ul li::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 17px;
+    background-size: cover;
+    background-image: url(/img/unchecked.png);
+    background-color: white;
+    background-position: center;
+    left: -20px;
+    top: 7px;
+}
+
+.container-list ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.container-list ul li.checked::before {
+    background-image: url(/img/checked.png);
+}
+
+.container-list ul li span {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+.container-list ul li span:hover {
+    background: #edeef0;
+    color: red;
+}
+
+hr {
+    background:rgb(49, 48, 48);
+    height: 1px;
+    border: none;
+    position: relative;
+    left: -20px;
+    width: 100%;
+}
+
+.container-list ul p {
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media screen and (min-width: 500px) {
+    .container-input button {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .container-input button {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1500px) {
+    .container-input button {
+        width: 30px;
+        height: 30px;
+    }
+}
