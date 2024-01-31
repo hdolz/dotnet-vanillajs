@@ -1,0 +1,13 @@
+name: aprendendo-github-actions
+run-name: ${{ github.actor }} está aprendendo Github Actions
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup .NET 8.x
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'
+      - name: Display dotnet version
+        run: dotnet --version
